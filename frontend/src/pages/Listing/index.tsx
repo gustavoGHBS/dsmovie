@@ -29,9 +29,13 @@ function Listing() {
             });
     }, [pageNumber]);
 
+    const hendalPageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber); 
+    }
+
     return (
         <>
-            <Pagination />
+            <Pagination page={page} oneChange={hendalPageChange} />
 
             <div className="container">
                 <div className="row">
